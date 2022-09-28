@@ -37,6 +37,7 @@ def replace_xlet(path, new_path):
     i = 0
     picture_class = ''
     for file in menu_class:
+
         if i == 0:
             picture_class = file
             shutil.copy(path + '/' + file + '.java', new_path + '/zp.java')
@@ -56,8 +57,3 @@ def replace_xlet(path, new_path):
         else:
             usage.replace_text(new_path + '/zm.java', file, 'z' + chr(96 + j))
             j += 1
-
-
-if __name__ == '__main__':
-    replace_xlet("/Users/meedvast/PycharmProjects/ChineseMenuSupport/00001",
-                 "/Users/meedvast/PycharmProjects/ChineseMenuSupport/ChineseMenu")
